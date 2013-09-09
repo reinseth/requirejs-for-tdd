@@ -1,0 +1,13 @@
+
+
+
+
+
+/**
+ * Utfordringer:
+ *
+ * - tilstand
+ * - initialisering
+ * - funksjoner
+ */
+
