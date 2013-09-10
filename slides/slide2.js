@@ -4,7 +4,7 @@ define(function (require) {
 
     return {
         timer: function (år, måned) {
-            return TimelisteService.hentTimer(måned, år);
+            return TimelisteService.hentTimer(år, måned);
         }
     };
 });

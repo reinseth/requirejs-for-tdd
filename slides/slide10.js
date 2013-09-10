@@ -1,14 +1,14 @@
 // spec/modules/TimelisteSpec.js
 describe('modules/Timeliste', function () {
-    var Timeliste, Service, transformMock;
+    var Timeliste, Service, tilViewModelMock;
 
     beforeEach(function () {
-        Service = require('modules/Services');
-        transformMock = jasmine.createSpy();
+        Service = require('services/TimelisteService');
+        tilViewModelMock = jasmine.createSpy();
 
         var requireFacade = function (dep) {
-            if (dep === 'helpers/transformTimeføring')
-                return transformMock;
+            if (dep === 'helpers/tilViewModel')
+                return tilViewModelMock;
             return require(dep);
         };
 
@@ -16,5 +16,5 @@ describe('modules/Timeliste', function () {
         Timeliste = TimelisteFactory(requireFacade);
     });
 
-    // (...)
+    it('henter timer fra TimelisteService', function () {/*...*/})
 });

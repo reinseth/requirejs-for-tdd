@@ -1,12 +1,11 @@
 // src/modules/Timeliste.js
 define(function (require) {
     var TimelisteService = require('services/TimelisteService'),
-        transform = require('helpers/transformTimeføring');
+        tilViewModel = require('helpers/tilViewModel');
 
     return {
         timer: function (år, måned) {
-            return transform(TimelisteService.hentTimer(måned, år));
+            return tilViewModel(TimelisteService.hentTimer(år, måned));
         }
     };
 });
-

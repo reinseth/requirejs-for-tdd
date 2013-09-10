@@ -1,4 +1,3 @@
-// src/modules/Timeliste.js
 define(function (require) {
     var TimelisteService = require('services/TimelisteService'),
         tilViewModel = require('helpers/tilViewModel');
@@ -8,4 +7,4 @@ define(function (require) {
             return tilViewModel(TimelisteService.hentTimer(år, måned));
         }
     };
-});
+})

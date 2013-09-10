@@ -1,31 +1,24 @@
 // src/modules/Timeliste.js
 define(function (require) {
     var TimelisteService = require('services/TimelisteService'),
-        transform = require('helpers/transformTimeføring');
+        tilViewModel = require('helpers/tilViewModel');
 
     return {
         timer: function (år, måned) {
-            return transform(TimelisteService.hentTimer(måned, år));
+            return tilViewModel(TimelisteService.hentTimer(år, måned));
         }
     };
 });
-
 
 // spec/modules/TimelisteSpec.js
 describe('modules/Timeliste', function () {
     var Timeliste = require('modules/Timeliste'),
         Service = require('services/TimelisteService'),
-        transform = require('helpers/transformTimeføring');
+        tilViewModel = require('helpers/tilViewModel');
 
     it('henter timer fra TimelisteService', function () {
         // Arrange
-        // (...)
-
-        spyOn(transform, ???);
-
-        spyOn(Service, 'hentTimer');
-        when(Service.hentTimer)
-            .isCalledWith(år, måned).thenReturn(mockResultat);
+        spyOn(???, 'tilViewModel');
 
         // (...)
     });
