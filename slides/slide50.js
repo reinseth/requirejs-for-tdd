@@ -1,11 +1,11 @@
 // spec/modules/TimelisteSpec.js
 describe('modules/Timeliste', function () {
-    var Timeliste, ServiceMock, tilViewModelMock;
+    var Timeliste, Service, tilViewModel;
 
     beforeEach(function () {
         Timeliste = autoMock('modules/Timeliste');
-        ServiceMock = getMockFor('services/TimelisteService');
-        tilViewModelMock = getMockFor('helpers/tilViewModel');
+        Service = getMockFor('services/TimelisteService');
+        tilViewModel = getMockFor('helpers/tilViewModel');
     });
 
     it('henter timer fra TimelisteService', function () {
@@ -15,10 +15,10 @@ describe('modules/Timeliste', function () {
         var mockTimer = [/*...*/];
         var mockResultat = [/*...*/];
 
-        when(ServiceMock.hentTimer)
+        when(Service.hentTimer)
             .isCalledWith(år, måned).thenReturn(mockTimer);
 
-        when(tilViewModelMock)
+        when(tilViewModel)
             .isCalledWith(mockTimer).thenReturn(mockResultat);
 
         // Act

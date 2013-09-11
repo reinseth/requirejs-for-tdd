@@ -1,0 +1,25 @@
+1. hei
+2. hvem kjenner requirejs og requirejs-testing
+/ synes dere det er vankselig/slitsomt å teste javascript-modulene deres?
+
+3. navigering/intro:
+- som javautvikler føles requirejs naturlig
+- utfordringer: umoden test-støtte for requirejs
+- utviklet teknikker som ligner mer på det jeg er vant til som javautviklier
+
+4. Use case: Timeliste
+ - utfordringer ved testing (state, initialisering, funksjoner)
+ - isolate.js og factory.js hjelper, men er begge forlatte prosjekter
+
+5. bruker factory.js, men blir mye boilerplate for å sette opp testene
+
+6. Løsning inspirert av isolate.js, Automocker (.net) og Mockito
+
+(7. Videre fordringer:
+ - teste integrasjon mellom moduler)
+
+8. Oppsummering:
+ - verktøystøtte for requirejs-testing umodent, men begynner å bli bra med grunt
+ - autoMock: tidlig fase / trenger videreutvikling
+ - bruke sinon.js som har bra stubbing
+ - håper det kan hjelpe dere

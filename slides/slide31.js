@@ -1,8 +1,20 @@
 // spec/modules/TimelisteSpec.js
 describe('modules/Timeliste', function () {
-    var Timeliste, Service, tilViewModelMock;
+    var Timeliste, Service, tilViewModel;
 
-    beforeEach(function () {/*...*/});
+    beforeEach(function () {
+        Service = require('services/TimelisteService');
+        tilViewModel = jasmine.createSpy();
+
+        var requireFacade = function (dep) {
+            if (dep === 'helpers/tilViewModel')
+                return tilViewModel;
+            return require(dep);
+        };
+
+        var TimelisteFactory = require('factory!modules/Timeliste');
+        Timeliste = TimelisteFactory(requireFacade);
+    });
 
     it('henter timer fra TimelisteService', function () {
         // Arrange
@@ -17,7 +29,7 @@ describe('modules/Timeliste', function () {
             return null;
         });
 
-        tilViewModelMock.andCallFake(function (arg1) {
+        tilViewModel.andCallFake(function (arg1) {
             if (arg1 === mockTimer) return mockResultat;
             return null;
         });
