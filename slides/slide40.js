@@ -4,8 +4,8 @@
 
 
 /**
- * - factory.js
- * - isolate.js
+ * - factory
+ * - isolate
  * - Mockito
  * - Automocker (C#)
  */
